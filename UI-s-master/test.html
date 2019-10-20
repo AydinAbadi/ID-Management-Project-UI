@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/test.css">
+    <script type="text/javascript" src="js/newtest.js"></script>
+    <script language="javascript" type="text/javascript" src="js/web3.min.js"></script>
+
+</head>
+<body>
+
+<div class="registerinput">
+    <label for="admin_address">admin address:</label>
+    <input type="text" name="admin_address" id="admin_address" class="admin_address"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <span id='admaddrres' class="admaddrres"></span><br><br>
+    <button class="adm_btn" onclick="add_admin()">
+        SUBMIT
+    </button>
+
+</div>
+<hr>
+<div class="registerinput">
+    <label for="client_address">client address:</label>
+    <input type="text" name="address client, bool res" id="client_address" class="client_address"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <span id='regaddrres' class="regaddress"></span><br><br>
+    <button class="client_btn" onclick="register_client()">
+        SUBMIT
+    </button>
+    <hr>
+    <label for="age">age:</label><input type="text" id="age" class="age" placeholder="e.g. 24">
+    <input type="text" name="address1" id="address1" class="address1"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address1" id="address2" class="address1"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address1" id="address3" class="address1"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+
+    <span id='ageval' class="ageval"></span><br><br>
+    <button class="insert_age" id="insert_age" onclick="insert_age()">insert age</button>
+    <hr>
+    <label for="degree">degree:</label>
+    <input type="text" id="degree" class="degree" placeholder="">
+    <span id='degreeval' class="degreeval"></span><br><br>
+    <label for="description">description:</label>
+    <br>
+    <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea>
+    <br>
+    <input type="text" name="address2" id="address4" class="address2"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address2" id="address5" class="address2"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address2" id="address6" class="address2"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <button class="insert_degree" id="insert_degree" onclick="insert_degree()">insert degree</button>
+    <hr>
+    <label for="license">license:</label>
+    <input type="text" id="license" class="license" placeholder="">
+    <span id='licenseval' class="licenseval"></span><br><br>
+    <label for="description2">description:</label><br>
+    <textarea name="description2" id="description2" class="description2" cols="30" rows="10"></textarea><br>
+    <label for="desdate">expiry date:</label><br>
+    <input type="date" id="desdate" class="desdate">
+    <br>
+    <input type="text" name="address3" id="address7" class="address3"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address3" id="address8" class="address3"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <input type="text" name="address3" id="address9" class="address3"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <br>
+    <button class="insert_license" id="insert_license" onclick="insert_license()">insert license</button>
+    <hr>
+
+</div>
+
+<div class="registerinput">
+    <label for="validator_address">validator address:</label>
+    <input type="text" name="validator_address" id="validator_address" class="validator_address"
+           placeholder="e.g. 0x50a8badb01890fa09666aabcc4408deadbeef421">
+    <span id='valaddrres' class="valaddrres"></span><br><br>
+    <button class="val_btn" onclick="register_validator()">
+        SUBMIT
+    </button>
+    <br>
+    <hr>
+    <label for="clientadd">client address:</label>
+    <input type="clientadd" name="clientadd" id="clientadd">
+    <label for="val1">validate age:</label>
+    <input type="radio" id="val1" name="val" value="True" checked onclick="getValue()"> Accepted
+    <input type="radio" name="val" value="False" onclick="getValue()"> Rejected<br>
+    <button class="validage" id="validage" onclick="validate_age()">validate age</button>
+    <br>
+    <span id='ageval2' class="ageval2"></span><br><br>
+    <hr>
+    <label for="clientadd2">client address:</label>
+    <input type="clientadd2" name="clientadd2" id="clientadd2">
+
+    <label for="valdegree">validate degree:</label>
+    <input type="radio" id="valdegree" name="val2" value="True" checked onclick="getValue2()"> Accepted
+    <input type="radio" name="val2" value="False" onclick="getValue2()"> Rejected<br>
+    index: <input type="text" id="indexdeg" name="indexdeg">
+
+    <button class="validdegree" id="validdegree" onclick="validate_degree()">validate degree</button>
+    <br>
+    <span id='degreeval2' class="degreeval2"></span><br><br>
+
+    <hr>
+    <label for="clientadd3">client address:</label>
+    <input type="clientadd3" name="clientadd3" id="clientadd3">
+
+    <label for="vallicense">validate license:</label>
+    <input type="radio" id="vallicense" name="val3" value="True" checked onclick="getValue3()"> Accepted
+    <input type="radio" name="val3" value="False" onclick="getValue3()"> Rejected<br>
+    index: <input type="text" id="indexlis" name="indexlis">
+    <button class="validlicense" id="validlicense" onclick="validate_license()">validate license</button>
+    <br>
+    <span id='licenseval2' class="licenseval2"></span><br><br>
+    <hr>
+    pay for validator:<br>
+    <label for="payval">client address:</label>
+    <input type="text" id="payval" name="payval">
+    <label for="valindex">verification index:</label>
+    <input type="text" id="valindex" name="valindex">
+    <button class="payforvalidator" name="payforvalidator" id="payforvalidator" onclick="pay_validator()">pay validator</button>
+    <span id='payvalidator' class="payvalidator"></span><br><br>
+    <hr>
+    verify age commitment:<br>
+    <label for="clicom">client address:</label>
+    <input type="text" id="clicom" name="clicom">
+    <br><br>
+    <label for="vercom">verifier address:</label>
+    <input type="text" id="vercom" name="vercom"><br><br>
+    <label for="val1">commmitment:</label>
+    <input type="radio" id="com1" name="com" value="True" checked onclick="getValue4()"> Accepted
+    <input type="radio" name="com" value="False" onclick="getValue4()"> Rejected<br>
+    <button class="verifycommitment" name="verifycommitment" id="verifycommitment" onclick="verify_commitment()">varify commmitment</button>
+    <span id='varsus' class="varsus"></span><br><br>
+    <hr>
+    <label for="proveattr">prove attributes ownership:</label><br><br>
+    <input type="text" id="proveattr" name="proveattr"><br><br>
+    <button name="proveattribute" id="proveattribute" onclick="proveAttributeOwnership()">prove attr ownership</button>
+    <hr>
+
+
+
+
+</div>
+<hr>
+<hr>
+<button onclick="check_client()">check client</button>
+<hr>
+<button onclick="check_validators()">check validators</button>
+<br>
+<br>
+<button onclick="return_clientlist()">client list</button>
+<button>client list</button>
+<button onclick="return_admin()">Owner list</button>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>-->
+<!--<script type="text/javascript" src="login/js/test.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<!--<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>-->
+</body>
+</html>

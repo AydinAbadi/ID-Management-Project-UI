@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Voluntary</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="../../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+	<!--<link rel="stylesheet" href="gobackbutton.scss">-->
+</head>
+<body>
+
+<div id="particles-js">
+		<div class="login">
+			<div class="login-top" style="font-size: 30px;font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;">
+				Registeration
+			</div>
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="../../img/client.jpeg"/></div>
+				<div class="login-center-input">
+
+					<span class="lb1">Client Address: </span><input type="text" id="client_address" name="client_address" value="" placeholder="" onfocus="this.placeholder=''" onblur="this.placeholder=''"/>
+					<span id='regaddrres' class="regaddress"></span><br><br>
+					<div class="login-center-input-text" style="font-size: 13px;font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;" >Client Address</div>
+				</div>
+			</div>
+			<button class="button blue skew" onclick="register_client()">Submit</button>
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="../../img/valid.jpeg"/></div>
+				<div class="login-center-input">
+					<span class="lb2"  style="font-size: 18px;">Validator Address: </span><input type="text" id="validator_address" name="validator_address"value="" placeholder="" onfocus="this.placeholder=''" onblur="this.placeholder=''"/>
+					<span id='valaddrres' class="valaddrres"></span><br><br>
+					<div class="login-center-input-text" style="font-size: 13px;font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;">Validator Address</div>
+				</div>
+			</div>
+                <button class="button blue skew" onclick="register_validator()">Submit</button>
+			<!--<div class="login-button">-->
+				<!--<div class="inner">-->
+					<!--<a href="../index.html" title="Back to homepage"></a>-->
+				<!--</div>-->
+				<div class="back"><a href="../index.html" title="Back to homepage">Back to homepage</a></div>
+
+			<!--</div>-->
+			<!--<div class="bk-btn">-->
+				<!--<div class="bk-btn-triangle"></div>-->
+				<!--<div class="bk-btn-bar"></div>-->
+			<!--</div>-->
+		</div>
+		<div class="sk-rotating-plane"></div>
+</div>
+
+<!-- scripts -->
+<script src="../../js/particles.min.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../../js/newtest.js"></script>
+
+<div style="text-align:center;">
+</div>
+</body>
+</html>
